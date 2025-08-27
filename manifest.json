@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "NO Youtube Ads",
+  "name": "유튜브 광고 파쇄기",
   "version": "0.1",
   "content_scripts": [
     {

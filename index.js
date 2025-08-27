@@ -23,14 +23,9 @@ function replaceAdBlocks() {
   const nv_ads_texts1 = Array.from(document.querySelectorAll(".ytwTopLandscapeImageLayoutViewModelHostIsClickableAdComponent"));
   const nv_ads_texts2 = Array.from(document.querySelectorAll("#rendering-content.ytd-in-feed-ad-layout-renderer"));
   const nv_ads_texts = [...nv_ads_texts1, ...nv_ads_texts2];
-  nv_ads_texts.push(document.getElementById("panels"));
 
   nv_ads_texts.forEach(e => {
-    if(e.id != "panels"){
-      e.innerHTML = "";
-    } else {
-      e.innerHTML = "";
-    }
+    e.innerHTML = "";
     e.onclick = (ev) => {
       ev.stopPropagation();
       ev.preventDefault();
