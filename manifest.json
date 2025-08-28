@@ -7,5 +7,8 @@
       "matches": ["<all_urls>"],
       "js": ["index.js"]
     }
-  ]
+  ],
+  icons": {
+   "128": "extension_icon128.png"
+  }
 }
