@@ -1,23 +1,23 @@
 // ======================
-// 1️⃣ 스킵 버튼 클릭
+// 1. 스킵 버튼 클릭
 // ======================
 function checkSkipButton() {
   const skipBtn1 = document.querySelector('.ytp-skip-ad-button');
   const skipBtn2 = document.querySelector('.ytp-ad-skip-button');
   if (skipBtn1) {
     skipBtn1.click();
-    console.log("✅ 스킵 버튼 클릭");
+    console.log("스킵 버튼 클릭");
     return true;
   } if (skipBtn2) {
     skipBtn2.click();
-    console.log("✅ 스킵 버튼 클릭");
+    console.log("스킵 버튼 클릭");
     return true;
   }
   return false;
 }
 
 // ======================
-// 2️⃣ 광고 블록 치환
+// 2. 광고 블록 치환
 // ======================
 function replaceAdBlocks() {
   const nv_ads_texts1 = Array.from(document.querySelectorAll(".ytwTopLandscapeImageLayoutViewModelHostIsClickableAdComponent"));
@@ -35,7 +35,7 @@ function replaceAdBlocks() {
 }
 
 // ======================
-// 3️⃣ 광고 감지 & 강제 종료
+// 3. 광고 감지 & 강제 종료
 // ======================
 const observer = new MutationObserver(() => {
   const ads = document.querySelectorAll('.ad-showing video');
@@ -48,10 +48,10 @@ const observer = new MutationObserver(() => {
         ad.currentTime = dur; // 광고 강제 점프
         console.log("⏩ 광고 강제 종료");
       } else {
-        console.log("⏳ duration 비정상 → 스킵 버튼 대기");
+        console.log("duration 비정상 → 스킵 버튼 대기");
       }
     } catch (err) {
-      console.warn("❌ currentTime 설정 실패:", err.message);
+      console.warn("currentTime 설정 실패:", err.message);
     }
   });
 
@@ -68,6 +68,6 @@ const observer = new MutationObserver(() => {
 observer.observe(document.body, { childList: true, subtree: true });
 
 // ======================
-// 4️⃣ 광고 블록 치환 주기 실행
+// 4. 광고 블록 치환 주기 실행
 // ======================
 setInterval(replaceAdBlocks, 500);
