@@ -8,7 +8,7 @@
       "js": ["index.js"]
     }
   ],
-  icons": {
+  "icons": {
    "128": "extension_icon128.png"
   }
 }
